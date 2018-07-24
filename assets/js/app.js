@@ -6,7 +6,7 @@ auth.onAuthStateChanged(function(user) {
 		var storageRef = storage.ref();
 		var storageName = storageRef.bucket;
 		storageRef.child('837645259.mp4').getDownloadURL().then(function(url) {
-			document.getElementsByName('video')[0].src = url;
+			document.getElementsByTagName('video')[0].src = url;
 		});
 	} else {
 		auth.signInAnonymously().catch(function(error) {
